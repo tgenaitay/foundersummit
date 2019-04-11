@@ -6,20 +6,20 @@
     </div>
     <section class="banner">
       <div class="banner__title">
-        <h1>Founder Summit 2019</h1>
-        <p class="banner__title--catchline">L'événement qui rassemble les différents experts de la tech lyonnaise pour vous aider à créer ou à développer vos projets.</p>
+        <h1>The Digital Academy.</h1>
+        <p class="banner__title--catchline">Catch line Donec ac dui non justo gravida sodales. Curabitur porta ligula sit amet vulputate ornare.</p>
       </div>
       <div class="banner__countdown">
         <div class="banner__countdown--date">
           <div class="content">
-            <span class="date day">04</span>
-            <span class="date">avril 2019</span>
+            <span class="date day">19</span>
+            <span class="date">May 2019</span>
           </div>
         </div>
-        <div v-if="!loading && timeLeft > 0"  class="banner__countdown--badge">Commence dans</div>
+        <div v-if="!loading && timeLeft > 0"  class="banner__countdown--badge">Starts in</div>
         <div class="banner__countdown--time">
-          <app-skeleton 
-            v-if="loading" 
+          <app-skeleton
+            v-if="loading"
             width="100%"
             height="10px">
           </app-skeleton>
@@ -36,15 +36,15 @@
             <span>L'événement a commencé</span>
           </div>
           <div v-if="!loading && timeLeft > 0" class="label">
-            <span>j.</span>
+            <span>d.</span>
             <span>h.</span>
             <span>m.</span>
             <span>s.</span>
           </div>
         </div>
         <div class="banner__countdown--buttons">
-          <a id="number3-58542912427" class="btn btn-red" @click="getId($event)">Billetterie</a>
-          <a href="#description" class="btn btn-white" v-smooth-scroll="{ duration: 1000, offset: -150 }">En savoir plus</a>
+          <a id="number3-58542912427" class="btn btn-red" @click="getId($event)">Register here</a>
+          <a href="#description" class="btn btn-white" v-smooth-scroll="{ duration: 1000, offset: -150 }">More info</a>
         </div>
       </div>
     </section>
@@ -73,18 +73,19 @@
         </div>
       </div>
       <div class="description__content">
-        <h3>Bienvenue au Founder Summit</h3>
-        <p class="description__content--text">Vous souhaitez créer votre startup ou êtes en cours de création mais n’avez pas encore toutes les cartes en main pour le faire ?
-          Vous êtes intéressé par le monde de l’entrepreneuriat en général et souhaitez en apprendre plus sur la création d’entreprise ?<br /><br />
-          Le <strong>Founder Summit</strong> vous apportera les réponses dont vous avez besoin à travers des entretiens individuels avec l’expert métier choisi en amont par vous-même.<br />
-          Vous disposerez de 10 minutes en tête-à-tête avec l’intervenant de votre choix pour exposer vos problématiques.<br /><br/>
-          Inscrivez-vous à cette demi-journée d’incubation durant laquelle vous pourrez rencontrer des experts métiers de domaines divers, tels que la <strong>comptabilité</strong>, la <strong>levée de fonds</strong>, la <strong>communication</strong> ou encore le <strong>marketing</strong>.
+        <h3>Welcome to the Digital Academy.</h3>
+        <p class="description__content--text">Bla bla here about the <strong>Digital Academy</strong>
+          <br/><br/>
+          Nulla augue quam, scelerisque at venenatis eu, mattis at ligula. Sed ut lobortis felis, in auctor nibh. Etiam gravida arcu et risus pellentesque, nec sodales lectus efficitur. Phasellus vitae faucibus nunc, in placerat dui. Donec massa ante, molestie in finibus ac, eleifend eu ante.
+          <br/><br/>
+          Mauris non massa at ante dignissim consequat in vitae nisl. Nunc non consectetur nisi. Phasellus commodo suscipit vestibulum.
+
         </p>
-        <a id="number4-58542912427" class="btn btn-red" @click="getId($event)">Billetterie</a>
+        <a id="number4-58542912427" class="btn btn-red" @click="getId($event)">Register here</a>
       </div>
     </section>
     <section class="conduct">
-      <h2>Le <span class="tag tag-red">déroulement</span></h2>
+      <h2>What is <span class="tag tag-red">the digital academy</span></h2>
       <div class="conduct__cards">
         <div v-for="(card, index) in cards" :key="index" class="conduct__cards--card">
           <span class="step">{{ index + 1 }}</span>
@@ -94,8 +95,8 @@
       </div>
     </section>
     <section id="intervenants" class="slider">
-      <h2>Les <span class="tag tag-yellow">intervenants</span></h2>
-      <p class="slider__subtitle">Venez parler aux différents experts métier de la tech présents pour vous lors de cet événement.</p>
+      <h2>The <span class="tag tag-yellow">instructors</span></h2>
+      <p class="slider__subtitle">Bla bla bla here</p>
       <div class="slider__slides">
         <div class="slider__slides--tabs gradient" @scroll="handleScroll">
           <div v-for="(attendee, index) in attendeesShuffled" :key="index" @click="activeTab = index" :class="['tab', activeTab === index ? 'active' : '']">
@@ -145,7 +146,7 @@
         </div>
         <div class="talk__content--text">
           <h3>L'esprit d'entreprendre avec Sylvain Tillon</h3>
-          <p>Sylvain Tillon, 35 ans, lorsqu’il présente son parcours, donne l’impression d’avoir vécu plusieurs vies. En l’espace d’une décennie à peine, il crée 4 sociétés (dont <strong>Sydo</strong> et <strong>Tilkee</strong>) et écrit plusieurs livres dont “100 conseils pratiques pour couler sa boîte”. 
+          <p>Sylvain Tillon, 35 ans, lorsqu’il présente son parcours, donne l’impression d’avoir vécu plusieurs vies. En l’espace d’une décennie à peine, il crée 4 sociétés (dont <strong>Sydo</strong> et <strong>Tilkee</strong>) et écrit plusieurs livres dont “100 conseils pratiques pour couler sa boîte”.
             Pour lui, il n’existe pas de recette magique pour créer son entreprise, seule la détermination et le soutien d’un entourage bienveillant suffisent. Et quand bien même le projet tomberait à l’eau, l’important est de savoir <strong>rebondir</strong> et <strong>apprendre</strong> de ses erreurs.
             Sa devise :"Ce n’est pas parce que les choses sont difficiles que nous n’osons pas, c’est parce que nous n’osons pas qu’elles sont difficiles" (Sénèque).
             Réelle personnalité de la tech lyonnaise, venez écouter son point de vue sur l’état d’esprit que doit avoir un <strong>entrepreneur</strong>.
@@ -154,10 +155,10 @@
       </div>
     </section>
     <section class="planning">
-      <h2>Le <span class="tag tag-yellow">planning</span></h2>
+      <h2>The <span class="tag tag-yellow">agenda</span></h2>
       <div class="planning__timeline">
         <div :class="['planning__timeline--meeting shift', active.greenShift ? 'active' : '']" @mouseenter="active.greenCard = true" @mouseleave="active.greenCard = false">
-          <span class="shift--start">14:00</span>
+          <span class="shift--start">10:00</span>
           🤝
         </div>
         <div :class="['planning__timeline--talk shift', active.blueShift ? 'active' : '']" @mouseenter="active.blueCard = true" @mouseleave="active.blueCard = false">
@@ -174,7 +175,7 @@
         <div id="meeting" :class="['planning__cards--card', active.greenCard ? 'active' : '']" @mouseenter="active.greenShift = true" @mouseleave="active.greenShift = false">
           <div class="head">
             <div class="tag tag-green">Meeting</div>
-            <div class="hours">14:00 - 17:00</div>
+            <div class="hours">10:00 - 17:00</div>
           </div>
           <p>Début de l’événement et de l’animation des stands</p>
         </div>
@@ -254,19 +255,19 @@ export default {
       loading: true,
       cards: [
         {
-          title: "Sélection d'un intervenant",
+          title: "Title 1 Donec ac dui",
           content:
-            "Choisissez un ou plusieurs expert(s) métier selon le domaine qui vous intéresse, de la comptabilité à la communication, selon le créneau de votre choix."
+            "Description 1 Curabitur porta ligula sit amet vulputate ornare. Nulla augue quam, scelerisque at venenatis eu, mattis at ligula."
         },
         {
-          title: "Rencontre avec l'expert",
+          title: "Title 2 Lorem ipsum dolor",
           content:
-            "Vous disposez de 10 minutes avec le fondateur choisi pour discuter de vos problématiques et lui poser toutes les questions nécessaires."
+            "Description 2 Nunc sollicitudin vehicula enim, vitae consequat leo fermentum congue. Donec placerat lacus id iaculis fringilla."
         },
         {
-          title: "Retour d'expérience",
+          title: "Title 3 Curabitur blandit",
           content:
-            "Une fois les 10 minutes terminées, vous disposez des réponses à vos questions et pouvez passer à un autre intervenant selon vos besoins."
+            "Description 3 Vestibulum risus purus, sodales vitae ligula vitae, tincidunt vulputate ligula"
         }
       ],
       attendees: [],
@@ -349,7 +350,7 @@ export default {
   },
   methods: {
     countDown() {
-      const countDownDate = new Date("Apr 4, 2019 14:00:00").getTime();
+      const countDownDate = new Date("May 19, 2019 10:00:00").getTime();
       const self = this;
       const x = setInterval(function() {
         const now = new Date().getTime();
@@ -375,7 +376,7 @@ export default {
       }
     },
     fetchAttendees() {
-      const Airtable = require("airtable");
+      /* const Airtable = require("airtable");
       Airtable.configure({
         endpointUrl: "https://api.airtable.com",
         apiKey: process.env.airtableKey
@@ -398,6 +399,7 @@ export default {
         .catch(err => {
           console.log(err);
         });
+        */
     },
     randomAttendeesList() {
       const attendees = this.attendees;
@@ -422,7 +424,7 @@ export default {
     this.$nextTick(() => {
       setTimeout(() => (this.loading = false), 200);
     });
-    this.fetchAttendees();
+    // this.fetchAttendees();
   }
 };
 </script>

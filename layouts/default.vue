@@ -31,12 +31,12 @@
 
 <script>
 import Header from "@/components/Header.vue";
-import Modal from "@/components/Modal.vue";
+// import Modal from "@/components/Modal.vue";
 
 export default {
   components: {
-    "app-header": Header,
-    "app-modal": Modal
+    "app-header": Header
+    // "app-modal": Modal
   },
   mounted() {
     console.log(

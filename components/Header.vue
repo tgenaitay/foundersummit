@@ -3,7 +3,6 @@
     <div class="__logo">
       <img src="../assets/images/le-wagon-smart-up-logo.svg" alt="Le wagon x Smart up logo">
     </div>
-    <a href="http://maps.google.com/maps?q=20+rue+des+capucins,+69001+lyon" target="_blank" rel="noreferrer noopener" class="__adress">20 rue des capucins, 69001 Lyon</a>
     <div class="__navigation">
       <a class="__navigation--underline" href="#intervenants" v-smooth-scroll="{ duration: 1000, offset: -50 }">Intervenants</a>
       <a class="__navigation--underline" href="mailto:lyon@lewagon.org">Contact</a>
@@ -22,10 +21,10 @@
       </div>
       <nav v-if="menuClicked" class="__mobile--navigation">
         <ul>
-          <li><a href="#intervenants" v-smooth-scroll="{ duration: 1000, offset: -50 }">Intervenants</a></li>
+          <li><a href="#intervenants" v-smooth-scroll="{ duration: 1000, offset: -50 }">Speakers</a></li>
           <li><a href="mailto:lyon@lewagon.org">Contact</a></li>
           <li>
-            <a id="number2-58542912427" class="btn btn-red" @click="getId($event)">Billetterie</a>
+            <a id="number2-58542912427" class="btn btn-red" @click="getId($event)">Application</a>
           </li>
         </ul>
       </nav>
