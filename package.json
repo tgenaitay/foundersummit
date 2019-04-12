@@ -1,7 +1,7 @@
 {
   "name": "fs19",
   "version": "1.0.0",
-  "description": "L’événement qui rassemble les différents experts de la tech lyonnaise pour vous aider à créer ou à développer vos projets.",
+  "description": "Description for this project",
   "author": "Ant Lio",
   "private": true,
   "scripts": {
@@ -11,7 +11,9 @@
     "generate": "nuxt generate",
     "lint": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "deploy": "nuxt generate; netlify deploy --dir=dist; netlify deploy --prod --dir=dist"
+    "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build",
+    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "@nuxtjs/google-analytics": "^2.2.0",
@@ -50,7 +52,8 @@
     "postcss-loader": "^3.0.0",
     "postcss-nested": "^4.1.1",
     "postcss-random": "^1.0.9",
-    "prettier": "1.14.3"
+    "prettier": "1.14.3",
+    "push-dir": "^0.4.1"
   },
   "lint-staged": {
     "*.{js,vue}": [

@@ -74,12 +74,14 @@
       </div>
       <div class="description__content">
         <h3>Welcome to the Digital Academy.</h3>
-        <p class="description__content--text">Bla bla here about the <strong>Digital Academy</strong>
+        <p class="description__content--text">
+          According to a recent study, the learning market in China has grown exponentially over the last five years. Projections put the number of people feeding the online learning machine in 2019 at over 387 million. Not only are the Chinese thirsty for more information and skills, they are more than willing to pay for it.
           <br/><br/>
-          Nulla augue quam, scelerisque at venenatis eu, mattis at ligula. Sed ut lobortis felis, in auctor nibh. Etiam gravida arcu et risus pellentesque, nec sodales lectus efficitur. Phasellus vitae faucibus nunc, in placerat dui. Donec massa ante, molestie in finibus ac, eleifend eu ante.
+          But while online courses cover a variety of topics ranging from language to digital skills, few concentrate specifically on the luxury industry in China. With the nation accounting for around one-third of global luxury sales, it is now more important than ever to be equipped with the relevant skills to deal with this dynamic and ever-changing business.
           <br/><br/>
-          Mauris non massa at ante dignissim consequat in vitae nisl. Nunc non consectetur nisi. Phasellus commodo suscipit vestibulum.
-
+          It is with the strong belief that knowledge should be shared, and the brightest talents given opportunities to learn and grow, that we are now launching The Digital Academy – a series of workshops focused on the digital industry. Created in collaboration with the world’s leading coding school, Le Wagon, The Digital Academy will offer digital professionals a curated selection of modules that allow them to enhance existing skills and acquire new ones. Its inaugural edition will take place on Sunday, 12 May, and registration is absolutely free.
+          <br/><br/>
+          What are you waiting for? As they all say, <strong>knowledge is power</strong>.
         </p>
         <a id="number4-58542912427" class="btn btn-red" @click="getId($event)">Register here</a>
       </div>
@@ -198,44 +200,26 @@
     <section class="informations">
       <div class="information">
         <div class="information__date">
-          <span class="information__date--day">04</span>
+          <span class="information__date--day">12</span>
           <div class="information__date--content">
-            <span class="month">avril 2019</span>
-            <span class="hours"> 14:00 - 19:00</span>
+            <span class="month">May 2019</span>
+            <span class="hours"> 10:00 - 19:00</span>
           </div>
 
         </div>
         <div class="information__direction">
           <img src="../assets/icons/map.svg" alt="map icon">
           <div class="information__direction--content">
-            <span>Le wagon Lyon</span>
-            <a href="http://maps.google.com/maps?q=20+rue+des+capucins,+69001+lyon" target="_blank" rel="noreferrer noopener">S'y rendre</a>
+            <span>Location</span>
+            <a href="http://maps.google.com/maps?q=20+rue+des+capucins,+69001+lyon" target="_blank" rel="noreferrer noopener">How to get there</a>
           </div>
         </div>
-        <div class="information__social">
-          <a href="https://facebook.com/lewagonlyon/"><img src="../assets/icons/facebook.svg" alt="facebook icon" target="_blank" rel="noreferrer noopener"></a>
-          <a href="https://instagram.com/lewagonlyon/"><img src="../assets/icons/instagram.svg" alt="instagram icon" target="_blank" rel="noreferrer noopener"></a>
-          <a href="https://twitter.com/lewagonlyon/"><img src="../assets/icons/twitter.svg" alt="twitter icon" target="_blank" rel="noreferrer noopener"></a>
-          <a href="https://www.linkedin.com/showcase/le-wagon-lyon/about/"><img src="../assets/icons/linkedin.svg" alt="linkedin icon" target="_blank" rel="noreferrer noopener"></a>
-        </div>
-        <a id="number5-58542912427" class="btn btn-white" @click="getId($event)">Billetterie</a>
+        <a id="number5-58542912427" class="btn btn-white" @click="getId($event)">Register</a>
       </div>
     </section>
     <footer>
       <div class="footer__images">
-        <img src="../assets/images/lewagon-lyon-logo.svg" alt="le wagon lyon logo">
-        <img src="../assets/images/smartup-logo.svg" alt="smart up logo">
-      </div>
-      <div class="footer__menu">
-        <a href="mailto:lyon@lewagon.org">
-          <span>Contactez-nous</span>
-        </a>
-        <a href="https://www.lewagon.com/fr/lyon/" target="_blank" rel="noreferrer noopener">
-          <span>Programme</span>
-        </a>
-        <a href="http://maps.google.com/maps?q=20+rue+des+capucins,+69001+lyon" target="_blank" rel="noreferrer noopener">
-          <span>Où nous trouver</span>
-        </a>
+        <img src="../assets/images/dlg-lewagon-logo.svg" alt="DLG x Le Wagon logo">
       </div>
     </footer>
   </div>
@@ -304,13 +288,13 @@ export default {
   },
   head() {
     return {
-      title: "Founder Summit 2019",
+      title: "The Digital Academy.",
       meta: [
         // Open Graph
         {
           name: "og:title",
           hid: "og:title",
-          content: "Founder Summit 2019"
+          content: "The Digital Academy."
         },
         {
           name: "og:description",
@@ -1163,6 +1147,7 @@ export default {
 footer {
   display: grid;
   justify-items: center;
+  margin: 40px 0px;
   .footer {
     &__images {
       display: flex;

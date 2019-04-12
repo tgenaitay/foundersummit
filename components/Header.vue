@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="__logo">
-      <img src="../assets/images/le-wagon-smart-up-logo.svg" alt="Le wagon x Smart up logo">
+      <img src="../assets/images/dlg-lewagon-logo.svg" alt="DLG x Le Wagon logo">
     </div>
     <div class="__navigation">
       <a class="__navigation--underline" href="#intervenants" v-smooth-scroll="{ duration: 1000, offset: -50 }">Speakers</a>
