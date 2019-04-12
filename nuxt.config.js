@@ -2,19 +2,6 @@ const pkg = require("./package");
 
 require("dotenv").config();
 
-const routerBase =
-  process.env.DEPLOY_ENV === "GH_PAGES"
-    ? {
-        router: {
-          base: "/tda/"
-        }
-      }
-    : {};
-
-export default {
-  ...routerBase
-};
-
 module.exports = {
   mode: "universal",
 
