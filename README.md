@@ -15,5 +15,7 @@ $ yarn run build
 $ yarn start
 
 # generate static project
-$ yarn run generate
+$ npm run generate
+# deploy on GH pages
+$ npm run deploy
 ```
