@@ -607,7 +607,7 @@ export default {
   text-align: center;
   margin-top: 150px;
   position: relative;
-  padding: 150px var(--spacing-base);
+  padding: 200px var(--spacing-base);
   width: 100%;
   left: 0;
   &:before {
