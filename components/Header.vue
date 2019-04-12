@@ -1,11 +1,11 @@
 <template>
   <header>
     <div class="__logo">
-      <img src="../assets/images/dlg-lewagon-logo.svg" alt="DLG x Le Wagon logo">
+      <img src="../assets/images/dlg-lewagon-logo.png" alt="DLG x Le Wagon logo">
     </div>
     <div class="__navigation">
-      <a class="__navigation--underline" href="#intervenants" v-smooth-scroll="{ duration: 1000, offset: -50 }">Speakers</a>
-      <a class="__navigation--underline" href="mailto:lyon@lewagon.org">Contact</a>
+      <a class="__navigation--underline" href="#intervenants" v-smooth-scroll="{ duration: 1000, offset: -50 }">Instructors</a>
+      <a class="__navigation--underline" href="mailto:claire.chen@lewagon.org">Contact</a>
       <a id="number1-58542912427" class="btn btn-white" @click="getId($event)">Register</a>
     </div>
     <div class="__mobile">
