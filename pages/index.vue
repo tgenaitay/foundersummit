@@ -12,7 +12,7 @@
       <div class="banner__countdown">
         <div class="banner__countdown--date">
           <div class="content">
-            <span class="date day">19</span>
+            <span class="date day">12</span>
             <span class="date">May 2019</span>
           </div>
         </div>
@@ -298,7 +298,7 @@ export default {
   computed: {
     timeFinished() {
       const timeNow = Date.now();
-      const timeEnded = new Date("Apr 4, 2019 19:00:00").getTime();
+      const timeEnded = new Date("May 12, 2019 19:00:00").getTime();
       return timeNow > timeEnded;
     }
   },
@@ -350,7 +350,7 @@ export default {
   },
   methods: {
     countDown() {
-      const countDownDate = new Date("May 19, 2019 10:00:00").getTime();
+      const countDownDate = new Date("May 12, 2019 10:00:00").getTime();
       const self = this;
       const x = setInterval(function() {
         const now = new Date().getTime();
@@ -369,14 +369,9 @@ export default {
       let bottom = evt.srcElement.clientHeight - evt.srcElement.scrollTop;
       console.log(bottom);
       const tab = document.querySelectorAll(".slider__slides--tabs");
-      if (bottom < -295) {
-        tab.classList.remove("gradient");
-      } else {
-        tab.classList.add("gradient");
-      }
     },
     fetchAttendees() {
-      /* const Airtable = require("airtable");
+      const Airtable = require("airtable");
       Airtable.configure({
         endpointUrl: "https://api.airtable.com",
         apiKey: process.env.airtableKey
@@ -399,7 +394,6 @@ export default {
         .catch(err => {
           console.log(err);
         });
-        */
     },
     randomAttendeesList() {
       const attendees = this.attendees;
@@ -424,7 +418,7 @@ export default {
     this.$nextTick(() => {
       setTimeout(() => (this.loading = false), 200);
     });
-    // this.fetchAttendees();
+    this.fetchAttendees();
   }
 };
 </script>

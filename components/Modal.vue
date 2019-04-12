@@ -3,7 +3,7 @@
     <div @click.stop class="modal__content">
       <div class="modal__content--header">
         <canvas id="confetti"></canvas>
-        <h2>Merci pour votre présence</h2>
+        <h2>Thank you for coming</h2>
         <div @click="isVisible = !isVisible" class="cross__container">
           <img src="~/assets/icons/cross.svg"  class="cross__container--element" alt="cross icon" />
         </div>
@@ -13,20 +13,20 @@
           <div class="metrics-container">
             <div class="metrics-container__element">
               <span>19</span>
-              <span>Intervenants</span>
+              <span>speakers</span>
             </div>
             <div class="metrics-container__element">
-              <span>45</span>
+              <span>200</span>
               <span>Participants</span>
             </div>
             <div class="metrics-container__element">
-              <span>250</span>
-              <span>Meetings</span>
+              <span>600</span>
+              <span>Connections</span>
             </div>
           </div>
           <div class="modal__footer">
-            <p>Être tenu informé de la seconde édition</p>
-            <span @click="slide" class="btn btn-red">Suivant</span>
+            <p>Want to be informed about the next Academy?</p>
+            <span @click="slide" class="btn btn-red">Next</span>
           </div>
         </div>
         <div v-if="!subscribed" class="body__email">

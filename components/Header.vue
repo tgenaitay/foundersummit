@@ -4,9 +4,9 @@
       <img src="../assets/images/le-wagon-smart-up-logo.svg" alt="Le wagon x Smart up logo">
     </div>
     <div class="__navigation">
-      <a class="__navigation--underline" href="#intervenants" v-smooth-scroll="{ duration: 1000, offset: -50 }">Intervenants</a>
+      <a class="__navigation--underline" href="#intervenants" v-smooth-scroll="{ duration: 1000, offset: -50 }">Speakers</a>
       <a class="__navigation--underline" href="mailto:lyon@lewagon.org">Contact</a>
-      <a id="number1-58542912427" class="btn btn-white" @click="getId($event)">Billetterie</a>
+      <a id="number1-58542912427" class="btn btn-white" @click="getId($event)">Register</a>
     </div>
     <div class="__mobile">
       <div @click="menuClicked = !menuClicked" class="__mobile--btn">

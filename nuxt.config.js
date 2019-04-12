@@ -10,14 +10,14 @@ module.exports = {
   */
   head: {
     htmlAttrs: {
-      lang: "fr"
+      lang: "en"
     },
-    title: "Founder Summit 2019",
-    titleTemplate: "%s - Le Wagon Lyon",
+    title: "The Digital Academy",
+    titleTemplate: "%s - Le Wagon Shanghai x Digital Luxury Group (DLG)",
     meta: [
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: pkg.description },
-      { name: "keywords", content: "founder, summit, lewagon, lyon" }
+      { name: "keywords", content: "digital, academy, shanghai, lewagon, DLG" }
     ],
     link: [
       {
@@ -36,9 +36,9 @@ module.exports = {
   },
 
   manifest: {
-    name: "Founder Summit 2019",
-    short_name: "FS19",
-    lang: "fr",
+    name: "The Digital Academy",
+    short_name: "TDA",
+    lang: "en",
     start_url: "/"
   },
 
