@@ -65,8 +65,7 @@ module.exports = {
   */
   modules: [
     ["@nuxtjs/pwa"],
-    ["@nuxtjs/google-analytics", { id: "UA-135962984-1", dev: false }],
-    ["nuxt-facebook-pixel-module", { pixelId: "1351265168355817" }]
+    ["@nuxtjs/google-analytics", { id: "UA-135962984-1", dev: false }]
   ],
 
   /*

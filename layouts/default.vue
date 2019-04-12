@@ -3,29 +3,6 @@
     <app-header></app-header>
     <app-modal></app-modal>
     <nuxt />
-    <no-ssr>
-      <cookie-consent>
-        <template slot="message">
-          <p>
-            <span>🍪</span> En continuant à naviguer sur ce site Web, vous consentez à ce que
-            nous utilisions des cookies.
-          </p>
-        </template>
-        <template slot="button">
-          <button class="btn--cookie">
-            <svg width="12" height="10" viewBox="0 0 12 10">
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M4.28027 6.77839L1.68962 4.20639L0.400391 5.48603L4.26808 9.32679L11.5654 2.0803L10.2762 0.800049L4.28027 6.77839V6.77839Z"
-                fill="#ffc96b"
-              ></path>
-            </svg>
-            <span>J'accepte</span>
-          </button>
-        </template>
-      </cookie-consent>
-    </no-ssr>
   </div>
 </template>
 
@@ -78,52 +55,6 @@ html {
 *:after {
   box-sizing: border-box;
   margin: 0;
-}
-
-.cookie-consent {
-  display: grid;
-  grid-auto-flow: column;
-  align-items: center;
-  gap: 10px;
-  position: fixed;
-  bottom: 40px;
-  background-color: white;
-  padding: 0 7px;
-  border-radius: 50px;
-  font-size: 0.8em;
-  font-weight: 300;
-  transform: translate(-50%, 50%);
-  left: 50%;
-  width: fit-content;
-  height: 40px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-  z-index: 20;
-  p {
-    display: flex;
-    align-items: center;
-    span {
-      font-size: 20px;
-      margin-top: 3px;
-      margin-right: 5px;
-    }
-  }
-  section {
-    .btn--cookie {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      background-color: var(--color-lightyellow);
-      color: var(--color-yellow);
-      border-radius: 50px;
-      border: 0;
-      width: 90px;
-      padding: 7px 3px 7px 0;
-      font-size: 1em;
-      font-family: var(--font-content-regular);
-      font-weight: 500;
-      cursor: pointer;
-    }
-  }
 }
 
 @media (--mobile), (--tablet) {
