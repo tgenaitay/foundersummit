@@ -197,7 +197,7 @@
     </section>
     <footer>
       <div class="footer__images">
-        <img src="../assets/images/dlg-lewagon-logo.svg" alt="DLG x Le Wagon logo">
+        <img src="../assets/images/dlg-lewagon-logo.png" alt="DLG x Le Wagon logo">
       </div>
     </footer>
   </div>
