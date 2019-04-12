@@ -1274,7 +1274,7 @@ footer {
   }
   .slider {
     margin-top: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
     padding: 0 20px;
     &__subtitle {
       text-align: left;
