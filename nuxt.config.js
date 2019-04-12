@@ -2,12 +2,6 @@ const pkg = require("./package");
 
 require("dotenv").config();
 
-export default {
-  router: {
-    base: "/tda/"
-  }
-};
-
 module.exports = {
   mode: "universal",
 
