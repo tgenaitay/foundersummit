@@ -79,8 +79,6 @@
           <br/><br/>
           But while online courses cover a variety of topics ranging from language to digital skills, few concentrate specifically on the luxury industry in China. With the nation accounting for around one-third of global luxury sales, it is now more important than ever to be equipped with the relevant skills to deal with this dynamic and ever-changing business.
           <br/><br/>
-          It is with the strong belief that knowledge should be shared, and the brightest talents given opportunities to learn and grow, that we are now launching The Digital Academy – a series of workshops focused on the digital industry. Created in collaboration with the world’s leading coding school, Le Wagon, The Digital Academy will offer digital professionals a curated selection of modules that allow them to enhance existing skills and acquire new ones. Its inaugural edition will take place on Sunday, 12 May, and registration is absolutely free.
-          <br/><br/>
           What are you waiting for? As they all say, <strong>knowledge is power</strong>.
         </p>
         <a id="number4-58542912427" class="btn btn-red" @click="getId($event)">Register here</a>
@@ -133,26 +131,6 @@
               <span class="content__description--description animated fadeIn" :key="currentTab.description">{{ currentTab.description }}</span>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-    <section class="talk">
-      <h2>Le <span class="tag tag-red">Talk</span></h2>
-      <div class="talk__content">
-        <div class="talk__content--image">
-          <picture>
-            <source type="image/webp" srcset="../assets/images/sylvain-tillon.webp">
-            <source type="image/png" srcset="../assets/images/sylvain-tillon.png">
-            <img src="../assets/images/sylvain-tillon.png" alt="Sylvain Tillon">
-          </picture>
-        </div>
-        <div class="talk__content--text">
-          <h3>L'esprit d'entreprendre avec Sylvain Tillon</h3>
-          <p>Sylvain Tillon, 35 ans, lorsqu’il présente son parcours, donne l’impression d’avoir vécu plusieurs vies. En l’espace d’une décennie à peine, il crée 4 sociétés (dont <strong>Sydo</strong> et <strong>Tilkee</strong>) et écrit plusieurs livres dont “100 conseils pratiques pour couler sa boîte”.
-            Pour lui, il n’existe pas de recette magique pour créer son entreprise, seule la détermination et le soutien d’un entourage bienveillant suffisent. Et quand bien même le projet tomberait à l’eau, l’important est de savoir <strong>rebondir</strong> et <strong>apprendre</strong> de ses erreurs.
-            Sa devise :"Ce n’est pas parce que les choses sont difficiles que nous n’osons pas, c’est parce que nous n’osons pas qu’elles sont difficiles" (Sénèque).
-            Réelle personnalité de la tech lyonnaise, venez écouter son point de vue sur l’état d’esprit que doit avoir un <strong>entrepreneur</strong>.
-          </p>
         </div>
       </div>
     </section>
