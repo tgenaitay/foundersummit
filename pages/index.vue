@@ -7,7 +7,7 @@
     <section class="banner">
       <div class="banner__title">
         <svg version="1.0" class="banner__title--logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-   width="648px" height="263px" viewBox="0 0 648 263" enable-background="new 0 0 648 263" xml:space="preserve">
+   width="648px" height="180px" viewBox="0 0 700 250" enable-background="new 0 0 648 263" xml:space="preserve">
         <g>
           <defs>
             <rect id="SVGID_1_" x="-365" y="-255" width="1366" height="768"/>
@@ -1426,11 +1426,12 @@ footer {
         font-size: 2.5em;
       }
       &--catchline {
-        margin: 50px 0 120px 0;
+        margin: 30px 0 120px 0;
         font-size: 1em;
       }
       &--logo {
         width: 348px;
+        margin-right: 0px;
       }
     }
     &__countdown {
@@ -1469,7 +1470,7 @@ footer {
   }
   .description {
     padding: 0 20px;
-    margin-top: 25px;
+    margin-top: 45px;
     &__content {
       width: 100%;
       display: grid;
