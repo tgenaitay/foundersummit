@@ -202,7 +202,7 @@
             c4.279,0,7.748-3.471,7.748-7.75S630.701,209.746,626.422,209.746"/>
         </g>
         </svg>
-        <p class="banner__title--catchline">数字人才一日沉浸式学习。<br><br>A one-day learning event for digital professionals.</p>
+        <p class="banner__title--catchline">DLG和Le Wagon为在上海的数字领域的专业人士打造的一项全新的学习机会<br><br>A one-day learning event for digital professionals.</p>
       </div>
       <div class="banner__countdown">
         <div class="banner__countdown--date">
