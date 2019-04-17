@@ -289,7 +289,7 @@
         </div>
       </div>
     </section>
-    <section id="intervenants" class="slider">
+    <section id="instructors" class="slider">
       <h2>The <span class="tag tag-yellow">instructors</span></h2>
       <div class="slider__slides">
         <div class="slider__slides--tabs gradient" @scroll="handleScroll">

@@ -21,7 +21,7 @@
       </div>
       <nav v-if="menuClicked" class="__mobile--navigation">
         <ul>
-          <li><a href="#intervenants" v-smooth-scroll="{ duration: 1000, offset: -50 }">Speakers</a></li>
+          <li><a href="#instructors" v-smooth-scroll="{ duration: 1000, offset: -50 }">Speakers</a></li>
           <li><a href="mailto:lyon@lewagon.org">Contact</a></li>
           <li>
             <a href="https://jinshuju.net/f/7EDPFl" class="btn btn-red">Application</a>
