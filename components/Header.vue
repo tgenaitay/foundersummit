@@ -4,7 +4,7 @@
       <img src="../assets/images/dlg-lewagon-logo.png" alt="DLG x Le Wagon logo">
     </div>
     <div class="__navigation">
-      <a class="__navigation--underline" href="#intervenants" v-smooth-scroll="{ duration: 1000, offset: -50 }">Instructors</a>
+      <a class="__navigation--underline" href="#instructors" v-smooth-scroll="{ duration: 1000, offset: -50 }">Instructors</a>
       <a class="__navigation--underline" href="mailto:claire.chen@lewagon.org">Contact</a>
       <a href="https://jinshuju.net/f/7EDPFl" class="btn btn-white">Register</a>
     </div>
