@@ -13,7 +13,7 @@ module.exports = {
       lang: "en"
     },
     title: "The Digital Academy",
-    titleTemplate: "%s - Le Wagon Shanghai x Digital Luxury Group (DLG)",
+    titleTemplate: "%s - Digital Luxury Group (DLG) x Le Wagon Shanghai",
     meta: [
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: pkg.description },
@@ -25,12 +25,6 @@ module.exports = {
         rel: "stylesheet",
         type: "image/x-icon",
         href: "/favicon.ico"
-      }
-    ],
-    script: [
-      {
-        src: "https://www.eventbrite.com/static/widgets/eb_widgets.js",
-        defer: true
       }
     ]
   },
@@ -65,7 +59,7 @@ module.exports = {
   */
   modules: [
     ["@nuxtjs/pwa"],
-    ["@nuxtjs/google-analytics", { id: "UA-135962984-1", dev: false }]
+    ["@nuxtjs/google-analytics", { id: "UA-138488414-1", dev: false }]
   ],
 
   /*
