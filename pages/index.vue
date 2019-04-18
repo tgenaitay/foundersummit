@@ -272,12 +272,11 @@
         <h3>Welcome to The Digital Academy.</h3>
         <p class="description__content--text">
 
-           <br/><br/>
-           With China’s digital economy valued at approximately $3.8 trillion, and its e-commerce market the largest in the world, it is not hard to recognise the importance placed on skills in this industry. This is compounded by the fact that competition in the digital sector is intensifying, and individuals are faced with the uphill task of constantly upgrading themselves to stay relevant.
-           <br>中国的数字经济价值约3.8万亿美元，其电子商务市场规模居世界首位，因此不难认识到该行业对技能的重视。此外，数字行业的竞争正在加剧，个人面临着不断提升自我以保持竞争力的艰巨任务。<br/>
-
+          <br/><br/>
+          With China’s digital economy valued at approximately $3.8 trillion, and its e-commerce market the largest in the world, it is not hard to recognise the importance placed on skills in this industry. This is compounded by the fact that competition in the digital sector is intensifying, and individuals are faced with the uphill task of constantly upgrading themselves to stay relevant.
           <br/><br/>
           It is with this in mind that <strong> DLG </strong> (Digital Luxury Group)  and leading coding school <strong> Le Wagon </strong> have launched The Digital Academy – a series of workshops that focus on helping participants acquire new digital skills and hone existing ones. A knowledge sharing initiative, it aims to groom and inspire the country’s best and brightest digital talents. Designed as a full day of courses, participants are free to build their own curriculums based on their interests, or even spend the bulk of their time networking and building relationships with other like-minded industry professionals. Here’s a sneak peek of the courses available on the day.
+          <br><br>中国的数字经济价值约3.8万亿美元，其电子商务市场规模居世界首位，因此不难认识到该行业对技能的重视。此外，数字行业的竞争正在加剧，个人面临着不断提升自我以保持竞争力的艰巨任务。<br/>
           <br>考虑到这一点，<strong> DLG </strong> (Digital Luxury Group)  和领先的编程学校 <strong> Le Wagon </strong> 发起了“数字思维学院”(The Digital Academy)——一系列旨在帮助参与者学习新的数字技能、并磨练现有技能的课程。这是一项知识共享计划，旨在培养和激励中国最优秀、最聪明的数字人才。学员可以根据自己的兴趣自由地选择当天的课程，甚至可以花大量时间与其他志同道合的行业专业人士社交并建立联系。以下是当天的课程简介。<br/>
           <br/><br/>
         </p>
@@ -1265,7 +1264,6 @@ export default {
       p {
         text-align: left;
         font-size: 1em;
-        margin-top: auto;
         margin-right: auto;
         margin-bottom: auto;
         line-height: 20px;
@@ -1502,13 +1500,23 @@ footer {
     padding: 0 20px;
     margin-top: 95px;
     min-height: 900px;
+    grid-template-columns: 1fr;
     &__content {
       width: 100%;
       display: grid;
       grid-row-gap: 10px;
     }
     &__images {
-      display: none;
+      margin-bottom: 50px;
+      &--image:first-child {
+        width: 357px;
+      }
+      &--image:nth-child(2) {
+        display: none;
+      }
+      &--image:last-child {
+        display: none;
+      }
     }
   }
   .conduct {
