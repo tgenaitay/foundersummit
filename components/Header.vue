@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="__logo">
-      <img src="../assets/images/dlg-lewagon-logo.png" alt="DLG x Le Wagon logo">
+      <img src="../assets/images/logo.svg" alt="DLG x Le Wagon logo">
     </div>
     <div class="__navigation">
       <a class="__navigation--underline" href="#instructors" v-smooth-scroll="{ duration: 1000, offset: -50 }">Instructors</a>
@@ -21,11 +21,11 @@
       </div>
       <nav v-if="menuClicked" class="__mobile--navigation">
         <ul>
-          <li><a href="#intervenants" v-smooth-scroll="{ duration: 1000, offset: -50 }">Speakers</a></li>
+          <li><a href="#instructors" v-smooth-scroll="{ duration: 1000, offset: -50 }">Instructors</a></li>
           <li><a href="mailto:claire.chen@lewagon.org">Contact</a></li>
 
           <li>
-            <a href="https://jinshuju.net/f/7EDPFl" class="btn btn-red">Application</a>
+            <a href="https://jinshuju.net/f/7EDPFl" class="btn btn-red">Register</a>
           </li>
         </ul>
       </nav>
@@ -61,14 +61,6 @@ header {
     display: flex;
     align-items: center;
     position: relative;
-    &:after {
-      content: "";
-      display: inline-block;
-      position: absolute;
-      right: -25px;
-      height: 43px;
-      border: 0.5px solid rgba(0, 0, 0, 0.2);
-    }
   }
   .__adress {
     flex: 1;

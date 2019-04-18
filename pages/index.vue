@@ -294,7 +294,7 @@
         </div>
       </div>
     </section>
-    <section id="intervenants" class="slider">
+    <section id="instructors" class="slider">
       <h2>The <span class="tag tag-yellow">Instructors</span></h2>
       <div class="slider__slides">
         <div class="slider__slides--tabs gradient" @scroll="handleScroll">
@@ -343,7 +343,7 @@
       </div>
     </section>
     <section class="planning">
-      <h2>The <span class="tag tag-yellow">The Agenda</span></h2>
+      <h2>The <span class="tag tag-yellow">Agenda</span></h2>
       <div class="planning__timeline">
         <div class="planning__timeline--check shift">
           <span class="shift--start">09:30</span>
@@ -364,7 +364,7 @@
           👨‍💻
         </div>
 
-        <div :class="['planning__timeline--toast shift', active.redShift ? 'active' : '']" @mouseenter="active.redCard = true" @mouseleave="active.redCard = false">
+        <div :class="['planning__timeline--toast shift', active.toastShift ? 'active' : '']" @mouseenter="active.toastCard = true" @mouseleave="active.toastCard = false">
           <span class="shift--start">17:30</span>
           🍸
           <span class="shift--end">19:30</span>
@@ -375,14 +375,14 @@
         <div id="workshop1" :class="['planning__cards--card', active.greenCard ? 'active' : '']" @mouseenter="active.greenShift = true" @mouseleave="active.greenShift = false">
           <div class="head">
 
-            <div class="tag tag-grey">Workshops</div>
+            <div class="tag tag-red">Workshops</div>
             <div class="hours">10:00 - 13:00</div>
           </div>
           <p>Acquire new digital skills and hone existing ones. Build your own curriculum based on your interests!</p>
         </div>
         <div id="lunch" :class="['planning__cards--card', active.blueCard ? 'active' : '']" @mouseenter="active.blueShift = true" @mouseleave="active.blueShift = false">
           <div class="head">
-            <div class="tag tag-orange">Lunch</div>
+            <div class="tag tag-yellow">Lunch</div>
             <div class="hours">13:00 - 14:00</div>
           </div>
           <p>Pause and reflect. Network and build relationships with other like-minded industry professionals.</p>
@@ -394,9 +394,9 @@
           </div>
           <p>Continue learning. Join more courses at your own pace.</p>
         </div>
-        <div id="party" class="planning__cards--card">
+        <div id="party" :class="['planning__cards--card', active.toastCard ? 'active' : '']" @mouseenter="active.toastShift = true" @mouseleave="active.toastShift = false">
           <div class="head">
-            <div class="tag tag-orange">Networking</div>
+            <div class="tag tag-yellow">Networking</div>
             <div class="hours">17:30 - 19:30</div>
           </div>
           <p>Grab a drink with us, make meaningful connections and end the day in style! 😎</p>
@@ -425,7 +425,7 @@
     </section>
     <footer>
       <div class="footer__images">
-        <img src="../assets/images/dlg-lewagon-logo.png" alt="DLG x Le Wagon logo">
+        <img src="../assets/images/logo.svg" alt="DLG x Le Wagon logo">
       </div>
     </footer>
   </div>
@@ -740,7 +740,6 @@ export default {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  height: 500px;
   position: relative;
   margin-top: 250px;
   padding: 0 var(--spacing-base);
@@ -1171,23 +1170,25 @@ export default {
     }
     &--check {
       grid-column: 1 / span 1;
-      background-color: var(--color-lightorange);
+      background-color: var(--color-lightyellow);
       &.active {
         background-color: #fd101560;
       }
     }
     &--meeting {
       grid-column: 2 / span 4;
-      background-color: var(--color-black);
+      color: var(--color-red);
+      background-color: var(--color-lightred);
       &.active {
-        background-color: #1edd8860;
+        background-color: var(--color-red);
       }
     }
     &--meeting2 {
       grid-column: 8 / span 8;
-      background-color: var(--color-black);
+      color: var(--color-red);
+      background-color: var(--color-lightred);
       &.active {
-        background-color: #1edd8860;
+        background-color: var(--color-red);
       }
     }
     &--talk {
@@ -1199,16 +1200,16 @@ export default {
     }
     &--toast {
       grid-column: 16 / span 3;
-      background-color: var(--color-lightorange);
+      background-color: var(--color-lightyellow);
       &.active {
-        background-color: #fd101560;
+        background-color: var(--color-yellow);
       }
     }
     &--break {
       grid-column: 6 / span 2;
-      background-color: var(--color-white);
+      background-color: var(--color-lightyellow);
       &.active {
-        background-color: #62ddf560;
+        background-color: var(--color-yellow);
       }
     }
   }
@@ -1454,12 +1455,13 @@ footer {
         font-size: 2.5em;
       }
       &--catchline {
-        margin: 30px 0 120px 0;
+        margin: 0 0 120px 0;
         font-size: 1em;
       }
       &--logo {
         width: 348px;
         margin-right: 0px;
+        margin-top: 30px;
       }
     }
     &__countdown {
@@ -1498,11 +1500,12 @@ footer {
   }
   .description {
     padding: 0 20px;
-    margin-top: 45px;
+    margin-top: 95px;
+    min-height: 900px;
     &__content {
       width: 100%;
       display: grid;
-      grid-row-gap: 40px;
+      grid-row-gap: 10px;
     }
     &__images {
       display: none;
