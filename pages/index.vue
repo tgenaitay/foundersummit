@@ -202,7 +202,8 @@
             c4.279,0,7.748-3.471,7.748-7.75S630.701,209.746,626.422,209.746"/>
         </g>
         </svg>
-        <p class="banner__title--catchline">DLG和Le Wagon为在上海的数字领域的专业人士打造的一项全新的学习机会<br><br>A one-day learning event for digital professionals.</p>
+        <p class="banner__title--catchline">Grooming and inspiring the brightest digital minds <br>
+        DLG和Le Wagon为在上海的数字领域的专业士打造一项全新的学习机会</p>
       </div>
       <div class="banner__countdown">
         <div class="banner__countdown--date">
@@ -268,13 +269,17 @@
         </div>
       </div>
       <div class="description__content">
-        <h3>Welcome to the Digital Academy.</h3>
+        <h3>Welcome to The Digital Academy.</h3>
         <p class="description__content--text">
-          据最近的一项研究表明，中国的学习市场在过去五年中呈倍数增长。预测2019年使用在线学习机器的人数将超过3.87亿。中国的专业年轻人士一直在寻求自我提升，但市场上有无数的课程可供选择，他们要从哪里开始呢?
+
+           <br/><br/>
+           With China’s digital economy valued at approximately $3.8 trillion, and its e-commerce market the largest in the world, it is not hard to recognise the importance placed on skills in this industry. This is compounded by the fact that competition in the digital sector is intensifying, and individuals are faced with the uphill task of constantly upgrading themselves to stay relevant.
+           <br>中国的数字经济价值约3.8万亿美元，其电子商务市场规模居世界首位，因此不难认识到该行业对技能的重视。此外，数字行业的竞争正在加剧，个人面临着不断提升自我以保持竞争力的艰巨任务。<br/>
+
           <br/><br/>
-          中国的数字经济价值约3.8万亿美元，其电子商务市场规模居世界首位，因此不难认识到该行业对技能的重视。此外，数字行业的竞争正在加剧，个人面临着不断提升自我以保持竞争力的艰巨任务。
+          It is with this in mind that<strong>DLG (Digital Luxury Group)</strong>and<strong>leading coding school Le Wagon</strong>have launched The Digital Academy – a series of workshops that focus on helping participants acquire new digital skills and hone existing ones. A knowledge sharing initiative, it aims to groom and inspire the country’s best and brightest digital talents. Designed as a full day of courses, participants are free to build their own curriculums based on their interests, or even spend the bulk of their time networking and building relationships with other like-minded industry professionals. Here’s a sneak peek of the courses available on the day.
+          <br>考虑到这一点，<strong>DLG (Digital Luxury Group)</strong>和领先的编程学校<strong>Le Wagon</strong>发起了“数字思维学院”(The Digital Academy)——一系列旨在帮助参与者学习新的数字技能、并磨练现有技能的课程。这是一项知识共享计划，旨在培养和激励中国最优秀、最聪明的数字人才。学员可以根据自己的兴趣自由地选择当天的课程，甚至可以花大量时间与其他志同道合的行业专业人士社交并建立联系。以下是当天的课程简介。<br/>
           <br/><br/>
-          考虑到这一点，<strong>DLG (Digital Luxury Group)</strong>和领先的编程学校<strong>Le Wagon</strong>发起了“数字思维学院”(The Digital Academy)——一系列旨在帮助参与者学习新的数字技能、并磨练现有技能的课程。这是一项知识共享计划，旨在培养和激励中国最优秀、最聪明的数字人才。学员可以根据自己的兴趣自由地选择当天的课程，甚至可以花大量时间与其他志同道合的行业专业人士社交并建立联系。以下是当天的课程简介。
         </p>
         <a id="number4-58542912427" class="btn btn-red" @click="getId($event)">Register here</a>
       </div>
@@ -290,7 +295,7 @@
       </div>
     </section>
     <section id="intervenants" class="slider">
-      <h2>The <span class="tag tag-yellow">instructors</span></h2>
+      <h2>The <span class="tag tag-yellow">Instructors</span></h2>
       <div class="slider__slides">
         <div class="slider__slides--tabs gradient" @scroll="handleScroll">
           <div v-for="(attendee, index) in attendeesShuffled" :key="index" @click="activeTab = index" :class="['tab', activeTab === index ? 'active' : '']">
@@ -326,7 +331,7 @@
             <div class="content__title animated fadeIn" :key="currentTab.title">{{ currentTab.title }}</div>
             <div class="content__description">
               <span class="content__description--description animated fadeIn">{{ currentTab.description_en }}</span>
-              <br>
+              <br><br/>
               <span class="content__description--description animated fadeIn">{{ currentTab.description_cn }}</span>
             </div>
           </div>
@@ -334,7 +339,7 @@
       </div>
     </section>
     <section class="planning">
-      <h2>The <span class="tag tag-yellow">agenda</span></h2>
+      <h2>The <span class="tag tag-yellow">The Agenda</span></h2>
       <div class="planning__timeline">
         <div :class="['planning__timeline--meeting shift', active.greenShift ? 'active' : '']" @mouseenter="active.greenCard = true" @mouseleave="active.greenCard = false">
           <span class="shift--start">10:00</span>
@@ -429,17 +434,17 @@ export default {
         {
           title: "Who?",
           content:
-            "The Digital Academy is created by DLG, the leading independent agency for international luxury brands and Le Wagon, the world’s most highly rated and product-centric coding boot camp.."
+            "The Digital Academy is created by DLG, the leading independent agency for international luxury brands and Le Wagon, the world’s most highly rated and product-centric coding boot camp."
         },
         {
           title: "What?",
           content:
-            "It is a one-day learning event for digital professionals, featuring courses formulated to hone everything from one's social media to design and development skills.."
+            "It is a one-day learning event for digital professionals, featuring courses that hone everything from content creation to technical development skills. "
         },
         {
           title: "Why?",
           content:
-            "Competition in the digital sector is intensifying in China, and individuals are faced with the uphill task of constantly upgrading themselves to stay relevant. As the first workshop series of its kind, The Digital Academy aims to groom and inspire the field’s best and brightest talents."
+            "Competition in the digital sector is intensifying in China, and individuals must constantly upgrade themselves to stay relevant. As the first workshop series of its kind, The Digital Academy aims to groom and inspire the field’s best and brightest."
         }
       ],
       attendees: [],
