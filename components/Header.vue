@@ -115,7 +115,7 @@ header {
 @media (--mobile) {
   header {
     padding: 0 20px;
-    margin-top: 20px;
+    margin-top: 40px;
     .__logo {
       &:after {
         display: none;

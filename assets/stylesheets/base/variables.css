@@ -10,6 +10,15 @@
   --color-lightgreen: #e4fff3;
   --color-black: #0e0000;
   --color-gray: #a6a4a4;
+  --color-lightorange:#F8C96A;
+  --color-orange:#D7982C;
+  --color-pink:#FBE8E7 ;
+  --color-black:#1A1A1A;
+  --color-gray: #FDF5E7;
+  --color-shade: #1E1D1B;
+  --color-white: #FFFFFF;
+
+
 
   /* Base font size */
   --font-base: 16px;
