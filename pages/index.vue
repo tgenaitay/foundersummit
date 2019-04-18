@@ -7,7 +7,7 @@
     <section class="banner">
       <div class="banner__title">
         <svg version="1.0" class="banner__title--logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-   width="648px" height="263px" viewBox="0 0 648 263" enable-background="new 0 0 648 263" xml:space="preserve">
+   width="648px" height="180px" viewBox="0 0 700 250" enable-background="new 0 0 648 263" xml:space="preserve">
         <g>
           <defs>
             <rect id="SVGID_1_" x="-365" y="-255" width="1366" height="768"/>
@@ -300,7 +300,7 @@
         <div class="slider__slides--tabs gradient" @scroll="handleScroll">
           <div v-for="(attendee, index) in attendeesShuffled" :key="index" @click="activeTab = index" :class="['tab', activeTab === index ? 'active' : '']">
             <span class="tab__name">{{ attendee.full_name }}</span>
-            <span class="tab__activity">{{ attendee.activity }}</span>
+            <span class="tab__activity">{{ attendee.activity_cn }}</span>
           </div>
         </div>
         <div class="slider__slides--content">
@@ -326,9 +326,15 @@
               <img src="../assets/icons/arrow.svg" v-if="activeTab < 14" @click="activeTab++" class="content__fullname--mobile right" alt="right arrow icon">
             </span>
             <span class="content__activity animated fadeIn" :key="currentTab.activity">
-              {{ currentTab.activity }}
+              {{ currentTab.activity_cn }}
+              <br>
+              {{ currentTab.activity_en }}
             </span>
-            <div class="content__title animated fadeIn" :key="currentTab.title">{{ currentTab.title }}</div>
+            <div class="content__title animated fadeIn" :key="currentTab.title">
+              {{ currentTab.title_cn }}
+              <br>
+              {{ currentTab.title_en }}
+            </div>
             <div class="content__description">
               <span class="content__description--description animated fadeIn">{{ currentTab.description_en }}</span>
               <br><br/>
@@ -341,19 +347,23 @@
     <section class="planning">
       <h2>The <span class="tag tag-yellow">The Agenda</span></h2>
       <div class="planning__timeline">
+        <div class="planning__timeline--check shift">
+          <span class="shift--start">09:30</span>
+          🤝
+        </div>
         <div :class="['planning__timeline--meeting shift', active.greenShift ? 'active' : '']" @mouseenter="active.greenCard = true" @mouseleave="active.greenCard = false">
           <span class="shift--start">10:00</span>
-          🤝
+          👨‍💻
         </div>
 
         <div :class="['planning__timeline--break shift', active.blueShift ? 'active' : '']" @mouseenter="active.blueCard = true" @mouseleave="active.blueCard = false">
           <span class="shift--start">12:00</span>
-          ###
+          🥗
         </div>
 
-        <div :class="['planning__timeline--talk shift', active.blueShift ? 'active' : '']" @mouseenter="active.blueCard = true" @mouseleave="active.blueCard = false">
+        <div :class="['planning__timeline--meeting2 shift', active.greenShift ? 'active' : '']" @mouseenter="active.greenCard = true" @mouseleave="active.greenCard = false">
           <span class="shift--start">13:00</span>
-          🗣
+          👨‍💻
         </div>
 
         <div :class="['planning__timeline--toast shift', active.redShift ? 'active' : '']" @mouseenter="active.redCard = true" @mouseleave="active.redCard = false">
@@ -364,29 +374,34 @@
 
       </div>
       <div class="planning__cards">
-        <div id="meeting" :class="['planning__cards--card', active.greenCard ? 'active' : '']" @mouseenter="active.greenShift = true" @mouseleave="active.greenShift = false">
+        <div id="workshop1" :class="['planning__cards--card', active.greenCard ? 'active' : '']" @mouseenter="active.greenShift = true" @mouseleave="active.greenShift = false">
           <div class="head">
 
             <div class="tag tag-green">Workshops</div>
             <div class="hours">10:00 - 12:00</div>
           </div>
-          <p>Début de l’événement et de l’animation des stands</p>
+          <p>Acquire new digital skills and hone existing ones. Build your own curriculum based on your interests!</p>
         </div>
-        <div id="talk" :class="['planning__cards--card', active.blueCard ? 'active' : '']" @mouseenter="active.blueShift = true" @mouseleave="active.blueShift = false">
+        <div id="lunch" :class="['planning__cards--card', active.blueCard ? 'active' : '']" @mouseenter="active.blueShift = true" @mouseleave="active.blueShift = false">
           <div class="head">
             <div class="tag tag-blue">Lunch Break</div>
             <div class="hours">12:00 - 13:00</div>
           </div>
-          <p>L'esprit entrepreneur avec<br />Sylvain Tillon</p>
+          <p>Pause and reflect. Network and build relationships with other like-minded industry professionals.</p>
         </div>
-        <div id="toast" :class="['planning__cards--card', active.redCard ? 'active' : '']" @mouseenter="active.redShift = true" @mouseleave="active.redShift = false">
+        <div id="workshop2" :class="['planning__cards--card', active.greenCard ? 'active' : '']" @mouseenter="active.greenShift = true" @mouseleave="active.greenShift = false">
           <div class="head">
-            <div class="tag tag-red">Workshops</div>
+            <div class="tag tag-green">Workshops</div>
             <div class="hours">13:00 - 17:30</div>
           </div>
-
-
-          <p>Apéro de <br />fin de journée</p>
+          <p>Continue learning. Join many more courses at your own pace.</p>
+        </div>
+        <div id="party" class="planning__cards--card">
+          <div class="head">
+            <div class="tag tag-red">After Party</div>
+            <div class="hours">17:30 - 19:00</div>
+          </div>
+          <p>Grab a drink with us, make meaningful connections and end up this day in style! 😎</p>
         </div>
       </div>
     </section>
@@ -493,41 +508,37 @@ export default {
           name: "og:description",
           hid: "og:description",
           content:
-            "L’événement qui rassemble les différents experts de la tech lyonnaise pour vous aider à créer ou à développer vos projets."
+            "数字人才一日沉浸式学习。A one-day learning event for digital professionals in Shanghai, China."
         },
-        { name: "og:url", content: "https://foundersummit.tech" },
+        { name: "og:url", content: "https://www.thedigitalacademy.sh" },
         {
           name: "og:site_name",
           hid: "og:site_name",
-          content: "Founder Summit"
-        },
-        {
-          name: "og:image",
-          content: "https://foundersummit.tech/thumbnail.png"
+          content: "The Digital Academy"
         },
         // Twitter Card
         { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:site", content: "Founder Summit" },
+        { name: "twitter:site", content: "The Digital Academy" },
         {
           name: "twitter:title",
-          content: "Founder Summit 2019"
+          content: "The Digital Academy - Shanghai 2019"
         },
         {
           name: "twitter:description",
           content:
-            "L’événement qui rassemble les différents experts de la tech lyonnaise pour vous aider à créer ou à développer vos projets."
+            "数字人才一日沉浸式学习。A one-day learning event for digital professionals in Shanghai, China."
         },
         {
           name: "twitter:image",
           content: "https://foundersummit.tech/thumbnail.png"
         },
-        { name: "twitter:image:alt", content: "Founder Summit image" }
+        { name: "twitter:image:alt", content: "The Digital Academy image" }
       ]
     };
   },
   methods: {
     countDown() {
-      const countDownDate = new Date("May 12, 2019 10:00:00").getTime();
+      const countDownDate = new Date("May 12, 2019 9:30:00").getTime();
       const self = this;
       const x = setInterval(function() {
         const now = new Date().getTime();
@@ -1117,7 +1128,7 @@ export default {
     height: 60px;
     background-color: rgba(229, 229, 229, 0.1);
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(17, 1fr);
     grid-column-gap: 1px;
     align-items: center;
     margin-top: 100px;
@@ -1160,8 +1171,22 @@ export default {
         bottom: -11px;
       }
     }
+    &--check {
+      grid-column: 1 / span 1;
+      background-color: var(--color-lightred);
+      &.active {
+        background-color: #fd101560;
+      }
+    }
     &--meeting {
-      grid-column: 1 / span 3;
+      grid-column: 2 / span 4;
+      background-color: var(--color-lightgreen);
+      &.active {
+        background-color: #1edd8860;
+      }
+    }
+    &--meeting2 {
+      grid-column: 8 / span 8;
       background-color: var(--color-lightgreen);
       &.active {
         background-color: #1edd8860;
@@ -1175,23 +1200,23 @@ export default {
       }
     }
     &--toast {
-      grid-column: 9 / span 4;
+      grid-column: 16 / span 3;
       background-color: var(--color-lightred);
       &.active {
         background-color: #fd101560;
       }
     }
     &--break {
-      grid-column: 4 / span 1;
-      background-color: var(--color-lightpurple);
+      grid-column: 6 / span 2;
+      background-color: var(--color-lightblue);
       &.active {
-        background-color: 9fa5ea;
+        background-color: #62ddf560;
       }
     }
   }
   &__cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 25px;
     margin-top: 100px;
 
@@ -1219,7 +1244,7 @@ export default {
       background-color: white;
       box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
       border-radius: 3px;
-      height: 174px;
+      min-height: 174px;
       padding: 20px;
       display: flex;
       flex-flow: column;
@@ -1431,11 +1456,12 @@ footer {
         font-size: 2.5em;
       }
       &--catchline {
-        margin: 50px 0 120px 0;
+        margin: 30px 0 120px 0;
         font-size: 1em;
       }
       &--logo {
         width: 348px;
+        margin-right: 0px;
       }
     }
     &__countdown {
@@ -1474,7 +1500,7 @@ footer {
   }
   .description {
     padding: 0 20px;
-    margin-top: 25px;
+    margin-top: 45px;
     &__content {
       width: 100%;
       display: grid;
