@@ -277,15 +277,15 @@
            <br>中国的数字经济价值约3.8万亿美元，其电子商务市场规模居世界首位，因此不难认识到该行业对技能的重视。此外，数字行业的竞争正在加剧，个人面临着不断提升自我以保持竞争力的艰巨任务。<br/>
 
           <br/><br/>
-          It is with this in mind that<strong>DLG (Digital Luxury Group)</strong>and<strong>leading coding school Le Wagon</strong>have launched The Digital Academy – a series of workshops that focus on helping participants acquire new digital skills and hone existing ones. A knowledge sharing initiative, it aims to groom and inspire the country’s best and brightest digital talents. Designed as a full day of courses, participants are free to build their own curriculums based on their interests, or even spend the bulk of their time networking and building relationships with other like-minded industry professionals. Here’s a sneak peek of the courses available on the day.
-          <br>考虑到这一点，<strong>DLG (Digital Luxury Group)</strong>和领先的编程学校<strong>Le Wagon</strong>发起了“数字思维学院”(The Digital Academy)——一系列旨在帮助参与者学习新的数字技能、并磨练现有技能的课程。这是一项知识共享计划，旨在培养和激励中国最优秀、最聪明的数字人才。学员可以根据自己的兴趣自由地选择当天的课程，甚至可以花大量时间与其他志同道合的行业专业人士社交并建立联系。以下是当天的课程简介。<br/>
+          It is with this in mind that <strong> DLG (Digital Luxury Group) </strong> and <strong> leading coding school Le Wagon </strong> have launched The Digital Academy – a series of workshops that focus on helping participants acquire new digital skills and hone existing ones. A knowledge sharing initiative, it aims to groom and inspire the country’s best and brightest digital talents. Designed as a full day of courses, participants are free to build their own curriculums based on their interests, or even spend the bulk of their time networking and building relationships with other like-minded industry professionals. Here’s a sneak peek of the courses available on the day.
+          <br>考虑到这一点，<strong> DLG (Digital Luxury Group) </strong> 和领先的编程学校 <strong> Le Wagon </strong> 发起了“数字思维学院”(The Digital Academy)——一系列旨在帮助参与者学习新的数字技能、并磨练现有技能的课程。这是一项知识共享计划，旨在培养和激励中国最优秀、最聪明的数字人才。学员可以根据自己的兴趣自由地选择当天的课程，甚至可以花大量时间与其他志同道合的行业专业人士社交并建立联系。以下是当天的课程简介。<br/>
           <br/><br/>
         </p>
         <a id="number4-58542912427" class="btn btn-red" @click="getId($event)">Register here</a>
       </div>
     </section>
     <section class="conduct">
-      <h2>What is <span class="tag tag-red">the digital academy</span></h2>
+      <h2>What is <span class="tag tag-red">The Digital Academy</span></h2>
       <div class="conduct__cards">
         <div v-for="(card, index) in cards" :key="index" class="conduct__cards--card">
           <span class="step">{{ index + 1 }}</span>
@@ -300,7 +300,7 @@
         <div class="slider__slides--tabs gradient" @scroll="handleScroll">
           <div v-for="(attendee, index) in attendeesShuffled" :key="index" @click="activeTab = index" :class="['tab', activeTab === index ? 'active' : '']">
             <span class="tab__name">{{ attendee.full_name }}</span>
-            <span class="tab__activity">{{ attendee.activity_cn }}</span>
+            <span class="tab__activity">{{ attendee.activity }}</span>
           </div>
         </div>
         <div class="slider__slides--content">
@@ -326,14 +326,12 @@
               <img src="../assets/icons/arrow.svg" v-if="activeTab < 14" @click="activeTab++" class="content__fullname--mobile right" alt="right arrow icon">
             </span>
             <span class="content__activity animated fadeIn" :key="currentTab.activity">
-              {{ currentTab.activity_cn }}
-              <br>
-              {{ currentTab.activity_en }}
+              {{ currentTab.activity }}
             </span>
             <div class="content__title animated fadeIn" :key="currentTab.title">
-              {{ currentTab.title_cn }}
-              <br>
               {{ currentTab.title_en }}
+              <br>
+              {{ currentTab.title_cn }}
             </div>
             <div class="content__description">
               <span class="content__description--description animated fadeIn">{{ currentTab.description_en }}</span>
@@ -357,19 +355,19 @@
         </div>
 
         <div :class="['planning__timeline--break shift', active.blueShift ? 'active' : '']" @mouseenter="active.blueCard = true" @mouseleave="active.blueCard = false">
-          <span class="shift--start">12:00</span>
+          <span class="shift--start">13:00</span>
           🥗
         </div>
 
-        <div :class="['planning__timeline--meeting2 shift', active.greenShift ? 'active' : '']" @mouseenter="active.greenCard = true" @mouseleave="active.greenCard = false">
-          <span class="shift--start">13:00</span>
+        <div :class="['planning__timeline--meeting2 shift', active.greenShift ? 'active' : '']" @mouseenter="active.orangeCard = true" @mouseleave="active.orangeCard = false">
+          <span class="shift--start">14:00</span>
           👨‍💻
         </div>
 
         <div :class="['planning__timeline--toast shift', active.redShift ? 'active' : '']" @mouseenter="active.redCard = true" @mouseleave="active.redCard = false">
           <span class="shift--start">17:30</span>
           🍸
-          <span class="shift--end">19:00</span>
+          <span class="shift--end">19:30</span>
         </div>
 
       </div>
@@ -377,31 +375,31 @@
         <div id="workshop1" :class="['planning__cards--card', active.greenCard ? 'active' : '']" @mouseenter="active.greenShift = true" @mouseleave="active.greenShift = false">
           <div class="head">
 
-            <div class="tag tag-green">Workshops</div>
-            <div class="hours">10:00 - 12:00</div>
+            <div class="tag tag-grey">Workshops</div>
+            <div class="hours">10:00 - 13:00</div>
           </div>
           <p>Acquire new digital skills and hone existing ones. Build your own curriculum based on your interests!</p>
         </div>
         <div id="lunch" :class="['planning__cards--card', active.blueCard ? 'active' : '']" @mouseenter="active.blueShift = true" @mouseleave="active.blueShift = false">
           <div class="head">
-            <div class="tag tag-blue">Lunch Break</div>
-            <div class="hours">12:00 - 13:00</div>
+            <div class="tag tag-orange">Lunch</div>
+            <div class="hours">13:00 - 14:00</div>
           </div>
           <p>Pause and reflect. Network and build relationships with other like-minded industry professionals.</p>
         </div>
         <div id="workshop2" :class="['planning__cards--card', active.greenCard ? 'active' : '']" @mouseenter="active.greenShift = true" @mouseleave="active.greenShift = false">
           <div class="head">
-            <div class="tag tag-green">Workshops</div>
-            <div class="hours">13:00 - 17:30</div>
+            <div class="tag tag-red">Workshops</div>
+            <div class="hours">14:00 - 17:30</div>
           </div>
-          <p>Continue learning. Join many more courses at your own pace.</p>
+          <p>Continue learning. Join more courses at your own pace.</p>
         </div>
         <div id="party" class="planning__cards--card">
           <div class="head">
-            <div class="tag tag-red">After Party</div>
-            <div class="hours">17:30 - 19:00</div>
+            <div class="tag tag-orange">Networking</div>
+            <div class="hours">17:30 - 19:30</div>
           </div>
-          <p>Grab a drink with us, make meaningful connections and end up this day in style! 😎</p>
+          <p>Grab a drink with us, make meaningful connections and end the day in style! 😎</p>
         </div>
       </div>
     </section>
@@ -411,7 +409,7 @@
           <span class="information__date--day">12</span>
           <div class="information__date--content">
             <span class="month">May 2019</span>
-            <span class="hours"> 10:00 - 19:00</span>
+            <span class="hours"> 9:30 - 19:30</span>
           </div>
 
         </div>
@@ -1173,42 +1171,42 @@ export default {
     }
     &--check {
       grid-column: 1 / span 1;
-      background-color: var(--color-lightred);
+      background-color: var(--color-lightorange);
       &.active {
         background-color: #fd101560;
       }
     }
     &--meeting {
       grid-column: 2 / span 4;
-      background-color: var(--color-lightgreen);
+      background-color: var(--color-black);
       &.active {
         background-color: #1edd8860;
       }
     }
     &--meeting2 {
       grid-column: 8 / span 8;
-      background-color: var(--color-lightgreen);
+      background-color: var(--color-black);
       &.active {
         background-color: #1edd8860;
       }
     }
     &--talk {
       grid-column: 5 / span 4;
-      background-color: var(--color-lightblue);
+      background-color: var(--color-black);
       &.active {
         background-color: #62ddf560;
       }
     }
     &--toast {
       grid-column: 16 / span 3;
-      background-color: var(--color-lightred);
+      background-color: var(--color-lightorange);
       &.active {
         background-color: #fd101560;
       }
     }
     &--break {
       grid-column: 6 / span 2;
-      background-color: var(--color-lightblue);
+      background-color: var(--color-white);
       &.active {
         background-color: #62ddf560;
       }
@@ -1265,7 +1263,7 @@ export default {
       }
       p {
         text-align: left;
-        font-size: 1.125em;
+        font-size: 1em;
         margin-top: auto;
         margin-right: auto;
         margin-bottom: auto;
@@ -1626,7 +1624,7 @@ footer {
     }
   }
   .planning {
-    padding: 0 20px;
+    padding: 0 10px;
     margin-top: 80px;
     &__timeline {
       display: none;

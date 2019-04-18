@@ -1,0 +1,158 @@
+Searching 92 files for "tag-yellow"
+
+/Users/lewagon/Downloads/tda/assets/stylesheets/components/tags.css:
+    9  }
+   10
+   11: .tag-yellow {
+   12    color: var(--color-yellow);
+   13    background-color: var(--color-lightyellow);
+
+/Users/lewagon/Downloads/tda/pages/index.vue:
+  296      </section>
+  297      <section id="intervenants" class="slider">
+  298:       <h2>The <span class="tag tag-yellow">Instructors</span></h2>
+  299        <div class="slider__slides">
+  300          <div class="slider__slides--tabs gradient" @scroll="handleScroll">
+  ...
+  344      </section>
+  345      <section class="planning">
+  346:       <h2>The <span class="tag tag-yellow">The Agenda</span></h2>
+  347        <div class="planning__timeline">
+  348          <div class="planning__timeline--check shift">
+
+3 matches across 2 files
+
+
+Searching 92 files for "yellow"
+
+/Users/lewagon/Downloads/tda/assets/stylesheets/base/typography.css:
+   43    width: 100%;
+   44    height: 9px;
+   45:   background-color: var(--color-lightyellow);
+   46    border-radius: 1px;
+   47    z-index: -1;
+
+/Users/lewagon/Downloads/tda/assets/stylesheets/base/variables.css:
+    3    --color-red: #EC7B36;
+    4    --color-lightred: #ffe9e7;
+    5:   --color-yellow: #ED7233;
+    6:   --color-lightyellow: #FCE5B9;
+    7    --color-blue: #1A1A1A;
+    8    --color-lightblue: #6D6D6D;
+
+/Users/lewagon/Downloads/tda/assets/stylesheets/components/tags.css:
+    9  }
+   10
+   11: .tag-yellow {
+   12:   color: var(--color-yellow);
+   13:   background-color: var(--color-lightyellow);
+   14  }
+   15
+
+/Users/lewagon/Downloads/tda/components/Modal.vue:
+  295                }
+  296                &:last-child {
+  297:                 color: var(--color-yellow);
+  298                }
+  299              }
+
+/Users/lewagon/Downloads/tda/pages/index.vue:
+  296      </section>
+  297      <section id="intervenants" class="slider">
+  298:       <h2>The <span class="tag tag-yellow">Instructors</span></h2>
+  299        <div class="slider__slides">
+  300          <div class="slider__slides--tabs gradient" @scroll="handleScroll">
+  ...
+  344      </section>
+  345      <section class="planning">
+  346:       <h2>The <span class="tag tag-yellow">The Agenda</span></h2>
+  347        <div class="planning__timeline">
+  348          <div class="planning__timeline--check shift">
+  ...
+  978          &:hover {
+  979            color: var(--color-red);
+  980:           background-color: var(--color-lightyellow);
+  981            border: 0.5px solid transparent;
+  982          }
+  ...
+ 1062              width: 235px;
+ 1063              border-radius: 50%;
+ 1064:             background-color: var(--color-lightyellow);
+ 1065              overflow: hidden;
+ 1066              position: relative;
+ ....
+ 1289    padding: 0 var(--spacing-base);
+ 1290    .information {
+ 1291:     background-color: var(--color-lightyellow);
+ 1292      border-radius: 3px;
+ 1293      display: flex;
+ ....
+ 1585                display: block;
+ 1586                position: absolute;
+ 1587:               background-color: var(--color-lightyellow);
+ 1588                padding: 20px 2px 20px 7px;
+ 1589                &.left {
+
+13 matches across 5 files
+
+
+Searching 92 files for "tag-green"
+
+/Users/lewagon/Downloads/tda/assets/stylesheets/components/tags.css:
+   19  }
+   20
+   21: .tag-green {
+   22    color: var(--color-green);
+   23    background-color: var(--color-lightgreen);
+
+/Users/lewagon/Downloads/tda/pages/index.vue:
+  376            <div class="head">
+  377
+  378:             <div class="tag tag-green">Workshops</div>
+  379              <div class="hours">10:00 - 12:00</div>
+  380            </div>
+  ...
+  390          <div id="workshop2" :class="['planning__cards--card', active.greenCard ? 'active' : '']" @mouseenter="active.greenShift = true" @mouseleave="active.greenShift = false">
+  391            <div class="head">
+  392:             <div class="tag tag-green">Workshops</div>
+  393              <div class="hours">13:00 - 17:30</div>
+  394            </div>
+
+3 matches across 2 files
+
+
+Searching 92 files for "  background-color: var(--color-lightgreen);
+tag-green"
+
+0 matches
+
+Searching 92 files for "--color-lightgreen"
+
+/Users/lewagon/Downloads/tda/assets/stylesheets/base/variables.css:
+    8    --color-lightblue: #F8C96A;
+    9    --color-green: #fff ;
+   10:   --color-lightgreen: #FFFFFF ;
+   11    --color-black: #0e0000;
+   12    --color-gray: #a6a4a4;
+
+/Users/lewagon/Downloads/tda/assets/stylesheets/components/tags.css:
+   21  .tag-green {
+   22    color: var(--color-green);
+   23:   background-color: var(--color-lightgreen);
+   24  }
+   25
+
+/Users/lewagon/Downloads/tda/pages/index.vue:
+ 1179      &--meeting {
+ 1180        grid-column: 2 / span 4;
+ 1181:       background-color: var(--color-lightgreen);
+ 1182        &.active {
+ 1183          background-color:#F8C96A ;
+ ....
+ 1186      &--meeting2 {
+ 1187        grid-column: 8 / span 8;
+ 1188:       background-color: var(--color-black);
+ 1189        &.active {
+ 1190          background-color:#a6a4a4 ;
+
+4 matches across 3 files

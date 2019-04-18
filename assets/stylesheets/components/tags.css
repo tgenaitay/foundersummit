@@ -13,9 +13,18 @@
   background-color: var(--color-lightyellow);
 }
 
+.tag-grey {
+  color: var(--color-white);
+  background-color: var(--color-shade);
+}
+
 .tag-blue {
   color: var(--color-blue);
   background-color: var(--color-lightblue);
+}
+.tag-orange {
+  color: var(--color-orange);
+  background-color: var(--color-lightorange);
 }
 
 .tag-green {
